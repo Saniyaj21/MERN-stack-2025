@@ -1,4 +1,161 @@
-# HTML notes and examples
+
+# **HTML Notes with Code Examples**
+
+## **Introduction to HTML**
+### **What is HTML?**
+- HTML (HyperText Markup Language) is the standard language for creating web pages.
+- It structures the content on the web.
+
+### **Why do we need HTML?**
+- It defines the structure of web pages.
+- It allows embedding of text, images, videos, and links.
+- It enables communication between web pages and users.
+
+### **Setting up the Environment**
+To start writing HTML, you need:
+1. **A Text Editor** – Use VS Code, Sublime Text, or Notepad++.
+2. **A Web Browser** – Chrome, Firefox, or Edge.
+3. **VS Code Extensions (Recommended)**:
+   - Live Server (for real-time preview)
+   - HTML Snippets (for faster coding)
+
+---
+
+## **Basic Structure of an HTML Document**
+Every HTML document follows a standard structure:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+    <link rel="stylesheet" href="style.css"> <!-- Adding CSS -->
+    <script src="script.js"></script> <!-- Adding JavaScript -->
+</head>
+<body>
+    <h1>Welcome to HTML</h1>
+</body>
+</html>
+```
+
+### **HTML Structure Components**
+1. `<!DOCTYPE html>` → Declares the document type.
+2. `<html>` → The root element of an HTML page.
+3. `<head>` → Contains metadata, title, CSS, and scripts.
+4. `<title>` → Sets the title of the web page.
+5. `<body>` → Contains the visible content of the page.
+
+---
+
+## **HTML Heading Tags**
+Headings define the importance of content.  
+There are **six levels** of headings in HTML.
+
+```html
+<h1>This is Heading 1</h1>
+<h2>This is Heading 2</h2>
+<h3>This is Heading 3</h3>
+<h4>This is Heading 4</h4>
+<h5>This is Heading 5</h5>
+<h6>This is Heading 6</h6>
+```
+- `<h1>` is the most important (largest text).
+- `<h6>` is the least important (smallest text).
+
+---
+
+## **HTML Paragraphs**
+Paragraphs are defined using `<p>`.
+
+```html
+<p>This is a simple paragraph.</p>
+```
+
+### **Attributes of `<p>`**
+- **`align`** → Aligns text (deprecated, use CSS instead).
+- **`style`** → Adds inline styles.
+
+```html
+<p style="color:blue; text-align:center;">This is a blue, centered paragraph.</p>
+```
+
+---
+
+## **HTML Images**
+Images are added using the `<img>` tag.
+
+```html
+<img src="image.jpg" alt="Description of Image" width="300" height="200">
+```
+
+### **Attributes of `<img>`**
+- **`src`** → Image path or URL.
+- **`alt`** → Alternate text for accessibility.
+- **`width` & `height`** → Define image dimensions.
+
+---
+
+## **HTML Lists**
+Lists are used to group related items.
+
+### **Ordered List (`<ol>`)**
+An ordered list displays items in a **numbered format**.
+
+```html
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+```
+
+### **Unordered List (`<ul>`)**
+An unordered list displays items in a **bulleted format**.
+
+```html
+<ul>
+    <li>Item A</li>
+    <li>Item B</li>
+    <li>Item C</li>
+</ul>
+```
+
+### **Nested Lists**
+Lists can be nested inside each other.
+
+```html
+<ul>
+    <li>Fruits
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+        </ul>
+    </li>
+    <li>Vegetables
+        <ul>
+            <li>Carrot</li>
+            <li>Spinach</li>
+        </ul>
+    </li>
+</ul>
+```
+
+### **List Attributes**
+- **`type`** → Defines list style (For `<ol>`: 1, A, a, I, i).
+- **`start`** → Specifies the start number in an ordered list.
+
+```html
+<ol type="A" start="3">
+    <li>Third Item</li>
+    <li>Fourth Item</li>
+</ol>
+```
+
+---
+
+This guide provides a strong foundation for HTML basics. Let me know if you need additional explanations or examples! 🚀
 
 ## 🔹 **Table**
 An HTML table is created using the `<table>` element. It consists of rows (`<tr>`), headers (`<th>`), and data cells (`<td>`). Here's a simple example:  
