@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web dev</title>
+    <meta name="description"
+        content="Learn the best SEO practices, including meta tags, keyword optimization, and technical SEO tips to rank higher on search engines.">
+    <meta name="keywords" content="SEO, meta tags, search engine optimization, digital marketing">
+</head>
+
+<body>
+    <h1>Class 2</h1>
+
+    <h2>Tables</h2>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Saniyaj</td>
+                <td>23</td>
+                <td rowspan="2">Kolkata</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Ayesha</td>
+                <td colspan="2">22</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>HTML form</h2>
+    <form id="form" method="post">
+        <input name="username" id="username" type="text">
+        <input name="password" type="password">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="/submit" method="POST" enctype="multipart/form-data" autocomplete="on">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="60">
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" required>
+
+
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+        <input type="radio" name="gender" value="male" checked>
+
+
+        <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+        <label><input type="checkbox" name="hobby" value="music"> Music</label>
+        <label><input type="checkbox" name="hobby" value="sports"> Sports</label>
+        <input type="checkbox" name="hobby" value="music" checked>
+
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <a href="https://saniyajmallik.vercel.app/" target="_blank">Visit Saniyaj</a>
+    <a href="./about.html"> visit about page</a>
+
+    <p>hi</p>
+    <p>hi</p>
+
+    <audio controls>
+        <source src="music.m4a" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <video width="400" controls>
+        <source src="vid.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+    </video>
+
+
+
+    <script>
+        let form = document.getElementById('form').addEventListener("submit", (e) => {
+            e.preventDefault()
+
+            let u_id = document.getElementById("username").value
+            console.log(u_id)
+        })
+    </script>
+</body>
+
+</html>
