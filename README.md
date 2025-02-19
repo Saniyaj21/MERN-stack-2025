@@ -178,12 +178,23 @@ Your study material is comprehensive and covers most of the fundamental concepts
 Rest parameters allow you to represent an indefinite number of arguments as an array. This is useful when you don't know how many arguments will be passed to the function.
 
 ```javascript
-function sumAll(...numbers) {
-    return numbers.reduce((acc, num) => acc + num, 0);
+function doSum(a, b, c, d, ...numbers) {
+    
+    console.log(numbers);
+    
+    let sum = 0;
+    sum = a + b + c +d;
+    
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    return sum;
 }
 
-console.log(sumAll(1, 2, 3)); // Logs 6
-console.log(sumAll(1, 2, 3, 4, 5)); // Logs 15
+let res = doSum(1, 2, 3, 4, 5, 6, 7, 8)
+let res2 = doSum(1, 2, 3, 4)
+console.log(res);
 ```
 - **Explanation**: The `sumAll` function uses the rest parameter `...numbers` to accept any number of arguments and sums them up.
 
