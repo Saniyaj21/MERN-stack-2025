@@ -151,16 +151,22 @@ You can use `call`, `apply`, and `bind` to share methods between objects.
 let mainPlain = {
     bookings: [],
     book: function (name, airLine, sit) {
-        this.bookings.push({ name, sit, airLine });
+        this.bookings.push({ name, airLine, sit });
     }
 };
+
+mainPlain.book("Saniyaj", "AIRIndia", 2)
+mainPlain.book("Shubha", "INDIGO", 9)
+
+console.log(mainPlain.bookings);
+
 
 let childPlain = {
     bookings: []
 };
 
-mainPlain.book.call(childPlain, "sani", "airIndia", 1);
-console.log(childPlain.bookings); // Output: [{ name: "sani", sit: 1, airLine: "airIndia" }]
+mainPlain.book.call(childPlain, "Rohit", "INDIGO", 9)
+console.log(childPlain.bookings)
 ```
 
 ### Explanation:
