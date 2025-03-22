@@ -1,9 +1,12 @@
 import React from 'react'
+import ImageCard from './components/ImageCard'
+import image from './assets/react.svg'
 
-const App = () => {
+function App() {
   return (
     <div>
-      hello
+      <ImageCard name='Saniyaj' image={image}/>
+      <ImageCard name='Akash' image={image}/>
     </div>
   )
 }
